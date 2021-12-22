@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/style.css">
+    <link rel="icon" href="/dist/img/Logo TLC.PNG">
+    <title>Dashboard</title>
+</head>
+<body class="font-Kameron">
+        <div x-data="{ sidebarOpen: false }" class="flex h-screen bg-clr-black">
+            <div :class="sidebarOpen ? 'block' : 'hidden'" @click="sidebarOpen = false" class="fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden"></div>
+            <!--SIDEBAR-->
+            <sidebar :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'" class="fixed z-30 inset-y-0 left-0 w-64 px-2 transition duration-300 transform bg-clr-black overflow-y-auto lg:translate-x-0 lg:static lg:inset-0">
+                <div class="flex items-center justify-center w-full mt-8 py-4 border-clr-whitesmoke border-opacity-30 border-t border-b">
+                    <img src="/dist/img/tom.jpg" alt="user_photo" class="h-10 mr-2 rounded-full">
+                    <figcaption class="flex flex-col items-start justify-center">
+                        <h2 class="text-clr-whitesmoke text-base font-semibold md:text-xl">Tom Sawyer</h2>
+                        <p class="text-sm text-clr-whitesmoke text-opacity-80 md:text-base">Affiliate</p>
+                    </figcaption>
+                </div>
+                <div class="p-4">
+                    <p class="text-gray-200 font-bold text-base">MENUS</p>
+                </div>
+                <!--NAVLINKS-->
+                <nav>
+                    <a class="hover:bg-clr-whitesmoke hover:bg-opacity-10 hover:border-l-6 hover:border-yellow-600 hover:text-clr-whitesmoke rounded-tr rounded-br text-gray-300 border-l-2 border-transparent flex items-center py-2 px-4 my-2" href="/dist/pages/dashboard/affiliate_management/index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                          </svg>
+                        <h3 class="text-base">Affiliate Management</h3>
+                    </a>
+                    <a class="hover:bg-clr-whitesmoke hover:bg-opacity-10 hover:border-l-6 hover:border-yellow-600 hover:text-clr-whitesmoke rounded-tr rounded-br text-gray-300 border-l-2 border-transparent flex items-center py-2 px-4 my-2" href="/dist/pages/dashboard/shopping_cart/index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <h3 class="text-base">Shopping Cart</h3>
+                    </a>
+                    <button onclick="myFunction(this);" class="hover:bg-clr-whitesmoke hover:bg-opacity-10 hover:border-l-6 hover:border-yellow-600 hover:text-clr-whitesmoke rounded-tr rounded-br text-gray-300 border-l-2 border-transparent flex items-center justify-between py-2 px-4 my-2 w-full">
+                        <span class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                            </svg>
+                            <h3 class="text-base">Wallet Management</h3>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <ul  id="d5" class="dropdown-content flex flex-col px-14">
+                        <li class="hover:text-clr-whitesmoke hover:underline list-disc text-gray-500 py-1"><a href="/dist/pages/dashboard/wallet_management/encashment/index.html"  class="text-base">Encashment</a></li>
+                        <li class="hover:text-clr-whitesmoke hover:underline list-disc text-gray-500 py-1"><a href="/dist/pages/dashboard/wallet_management/withdrawal/index.html" class="text-base">Withdrawal</a></li>
+                    </ul>
+                    <a class="hover:bg-clr-whitesmoke hover:bg-opacity-10 hover:border-l-6 hover:border-yellow-600 hover:text-clr-whitesmoke rounded-tr rounded-br text-gray-300 border-l-2 border-transparent flex items-center py-2 px-4 my-2" href="/dist/pages/dashboard/genealogy/index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+                        </svg>
+                        <h3 class="text-base">Genealogy</h3>
+                    </a>
+                </nav>
+            </sidebar>
+            
+            <div class="flex-1 flex flex-col overflow-hidden">
+                <!--HEADER-->
+                <header class="flex justify-between items-center py-2 px-2 bg-clr-black shadow-2xl md:py-4 md:px-4">
+                    <!--menu icon-->
+                    <svg @click="sidebarOpen = true" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-600 md:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                    <!--search bar-->
+                    <div class="flex items-center rounded-full bg-clr-light-black py-1 px-2 hidden md:flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="cursor-pointer h-5 w-5 mx-2 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        <input type="search" class="bg-transparent border-none outline-none text-sm text-clr-whitesmoke md:text-base" placeholder="Search">
+                    </div>
+                    <!--icons-->
+                    <div class="flex items-center">
+                        <!--cart-->
+                        <a href="/dist/pages/dashboard/cart/index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="hidden md:flex hover:text-yellow-400 cursor-pointer h-5 w-5 mx-2 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </a>
+                        <!--order-->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="hidden md:flex hover:text-yellow-400 cursor-pointer h-5 w-5 mx-2 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                        </svg>
+                        <!--notifications-->
+                        <button onclick="myFunction(this);" class="dropbtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="hidden md:flex hover:text-yellow-400 cursor-pointer h-5 w-5 mx-2 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                        </button>
+                        <article id="d3" class="dropdown-content absolute top-14 right-14 z-30 h-auto w-52 px-2 bg-clr-mid-black rounded-md shadow flex flex-col">
+                            <span class="flex items-center justify-between border-b w-full py-2 px-2">
+                                <p class="text-sm text-clr-whitesmoke md:text-base">Notification</p>
+                                <small class="hover:underline cursor-pointer text-sm text-yellow-600">Clear All</small>
+                            </span>
+                            <div class="flex flex-col h-36 w-full overflow-y-auto">
+                                <a href="#" class="hover:bg-clr-whitesmoke hover:bg-opacity-5 flex items-start w-full py-2 px-2">
+                                    <img src="/dist/img/family.jpg" alt="user_photo" class="h-8 w-8 rounded-full mr-2">
+                                    <figcaption>
+                                        <h3 class="text-sm text-white">ABCDEFG</h3>
+                                        <small class="text-xs text-clr-whitesmoke">hijklmnopqrstuvwxyz</small>
+                                    </figcaption>
+                                </a>
+                                <a href="#" class="hover:bg-clr-whitesmoke hover:bg-opacity-5 flex items-start w-full py-2 px-2">
+                                    <img src="/dist/img/family.jpg" alt="user_photo" class="h-8 w-8 rounded-full mr-2">
+                                    <figcaption>
+                                        <h3 class="text-sm text-white">ABCDEFG</h3>
+                                        <small class="text-xs text-clr-whitesmoke">hijklmnopqrstuvwxyz</small>
+                                    </figcaption>
+                                </a>
+                                <a href="#" class="hover:bg-clr-whitesmoke hover:bg-opacity-5 flex items-start w-full py-2 px-2">
+                                    <img src="/dist/img/family.jpg" alt="user_photo" class="h-8 w-8 rounded-full mr-2">
+                                    <figcaption>
+                                        <h3 class="text-sm text-white">ABCDEFG</h3>
+                                        <small class="text-xs text-clr-whitesmoke">hijklmnopqrstuvwxyz</small>
+                                    </figcaption>
+                                </a>
+                            </div>
+                            <span class="flex items-center justify-center border-t w-full py-2 px-2">
+                                <small class="hover:underline cursor-pointer text-sm text-yellow-600">View All</small>
+                            </span>
+                        </article>
+                        <!--logo-->
+                        <button onclick="myFunction(this);" class="dropbtn">
+                            <img src="/dist/img/Logo TLC.PNG" alt="tlc_logo" class="cursor-pointer h-12 md:h-10">
+                        </button>
+                        <article id="d4" class="dropdown-content absolute top-16 right-6 z-30 h-auto w-auto py-2 px-4 bg-clr-whitesmoke rounded-md shadow flex flex-col">
+                            <span class="flex items-start pb-2">
+                                <a href="/dist/index.html"><img src="/dist/img/Logo TLC.PNG" alt="tlc_logo" class="cursor-pointer h-14 w-14 bg-black rounded-md mr-2 sm:mr-4 md:h-14 md:w-14 lg:h-16"></a>
+                                    <figcaption class="flex flex-col">
+                                        <h3 class="text-clr-black text-base font-medium">TOM SAWYER</h3>
+                                        <small class="text-sm md:pb-2">tomasawyer@gmail.com</small>
+                                        <a href="/dist/pages/dashboard/profile/index.html" class="hover:bg-yellow-600 hover:text-white transition duration-300 ease-in text-xs bg-yellow-400 py-2 px-4 rounded-md text-center">View Profile</a>
+                                    </figcaption>
+                            </span>
+                            <a href="#" class="hover:bg-white cursor-pointer border-b px-2 py-2 w-full">
+                                <p class="text-sm">My Orders</p>
+                            </a>
+                            <div class="border-b w-full flex flex-col">
+                                <a href="#" class="hover:bg-white cursor-pointer text-sm p-2">Account Security</a>
+                                <a href="#" class="hover:bg-white cursor-pointer text-sm p-2">Update my account</a>
+                            </div>
+                            <a href="#" class="hover:bg-white cursor-pointer py-2 px-2 w-full">
+                                <p class="text-sm">Logout</p>
+                            </a>
+                        </article>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="cursor-pointer h-5 w-5 text-yellow-600 flex md:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                    </svg>
+                </header>
+
+                <!---MOBILE NAVBAR -->
+                <div id="bars" class="bg-clr-black flex items-center justify-center w-full p-2 md:hidden">
+                    <button onclick="navToggle(this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="toggle-open hover:text-yellow-400 h-5 w-5 text-yellow-600 mx-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                    <article id="d1" class="toggle-content scrollbar-hide absolute top-28 right-0 z-20 bg-clr-black rounded-b-lg p-2 w-full md:top-32">
+                        <div class="flex items-center rounded-lg bg-clr-light-black py-2 px-2 w-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="cursor-pointer h-5 w-5 mx-2 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                            <input type="search" class="bg-transparent border-none outline-none text-sm text-clr-whitesmoke w-full md:text-base" placeholder="Search">
+                        </div>
+                    </article>
+                    <a href="/dist/pages/dashboard/cart/index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="hover:text-yellow-400 cursor-pointer h-5 w-5 mx-2 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </a>
+                    <a href="/dist/pages/dashboard/shopping_cart/index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="hover:text-yellow-400 cursor-pointer h-5 w-5 mx-2 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                        </svg>
+                    </a>
+                    <button onclick="navToggle(this);">
+                        <a href="/dist/index.html"><img src="/dist/img/Logo TLC.PNG" alt="tlc_logo" class="cursor-pointer h-8 md:h-10"></a>
+                    </button>
+                    <article id="d2" class="toggle-content absolute top-28 right-6 z-20 bg-clr-whitesmoke rounded-b-lg p-4 w-10/12 flex flex-col items-start sm:w-auto sm:inset-x-64 md:top-32 md:inset-x-60">
+                        <span class="flex items-start pb-2">
+                            <img src="/dist/img/Logo TLC.PNG" alt="tlc_logo" class="cursor-pointer h-14 w-14 bg-black rounded-md mr-2 sm:mr-4 md:h-16">
+                                <figcaption class="flex flex-col w-full">
+                                    <h3 class="text-clr-black text-base font-medium">TOM SAWYER</h3>
+                                    <small class="text-sm pb-1 md:pb-2">tomasawyer@gmail.com</small>
+                                    <a href="/dist/pages/dashboard/profile/index.html" class="hover:bg-yellow-600 hover:text-white text-xs bg-yellow-400 py-2 px-4 rounded-md text-center">View Profile</a>
+                                </figcaption>
+                        </span>
+                        <a href="#" class="hover:bg-white cursor-pointer border-b py-2 w-full">
+                            <p class="text-sm px-2">My Orders</p>
+                        </a>
+                        <a href="#" class="border-b w-full">
+                            <p class="hover:bg-white cursor-pointer text-sm p-2">Account Security</p>
+                            <p class="hover:bg-white cursor-pointer text-sm p-2">Update my account</p>
+                        </a>
+                        <a href="#" class="hover:bg-white cursor-pointer p-2 w-full">
+                            <p class="text-sm">Logout</p>
+                        </a>
+                    </article>
+                </div>
+    
+                <!--MAIN-->
+                <main class="flex-1 overflow-x-hidden overflow-y-auto bg-clr-mid-black">
+                    <section class="container mx-auto px-2 py-8 bg-clr-mid-black sm:px-4">
+                        <div class="px-4 sm:px-6">
+                            <h3 class="text-white text-xl font-medium sm:text-2xl md:text-3xl">Welcome back, <a>TOM!</a></h3>
+                            <p class="text-clr-whitesmoke text-sm sm:text-base xl:text-lg">Your referral code is <a class="text-yellow-600">TRO987654321</a></p>
+                        </div>
+                        <!--boxes-->
+                        <article class="mt-4 w-full">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
+                                <!--box1-->
+                                <div class="w-full px-2 mb-4 transition transform duration-300 hover:-translate-y-2">
+                                    <span class="flex items-center px-5 py-3 shadow-sm rounded-md bg-blue-300 xl:px-4">
+                                        <div class="p-3 rounded-full bg-blue-400">
+                                            <img class="h-7 xl:h-5" src="https://img.icons8.com/carbon-copy/50/000000/new-job.png"/>
+                                        </div>
+                                        <figcaption class="mx-4">
+                                            <h4 class="text-base font-semibold text-clr-black sm:text-lg xl:text-base">Recruit</h4>
+                                            <div class="text-clr-mid-black text-base sm:text-lg">1</div>
+                                        </figcaption>
+                                    </span>
+                                </div>
+                                <!--box2-->
+                                <div class="w-full px-2 mb-4 transition transform duration-300 hover:-translate-y-2">
+                                    <span class="flex items-center px-5 py-3 shadow-sm rounded-md bg-red-300 xl:px-4">
+                                        <div class="p-3 rounded-full bg-red-400">
+                                            <img class="h-7 xl:h-5" src="https://img.icons8.com/ios/50/000000/total-sales-1.png"/>
+                                        </div>
+                                        <figcaption class="mx-4 xl:mx-2">
+                                            <h4 class="text-base font-semibold text-clr-black sm:text-lg xl:text-base">Gross Total Earnings</h4>
+                                            <div class="text-clr-mid-black text-base sm:text-lg">740.00</div>
+                                        </figcaption>
+                                    </span>
+                                </div>
+                                <!--box3-->
+                                <div class="w-full px-2 mb-4 transition transform duration-300 hover:-translate-y-2">
+                                    <span class="flex items-center px-5 py-3 shadow-sm rounded-md bg-green-300 xl:px-4">
+                                        <div class="p-3 rounded-full bg-green-400">
+                                            <img class="h-7 xl:h-5" src="https://img.icons8.com/ios/50/000000/gift.png"/>
+                                        </div>
+                                        <figcaption class="mx-4">
+                                            <h4 class="text-base font-semibold text-clr-black sm:text-lg xl:text-base">Gift Checks</h4>
+                                            <div class="text-clr-mid-black text-base sm:text-lg">0</div>
+                                        </figcaption>
+                                    </span>
+                                </div>
+                                <!--box4-->
+                                <div class="w-full px-2 mb-4 transition transform duration-300 hover:-translate-y-2">
+                                    <span class="flex items-center px-5 py-3 shadow-sm rounded-md bg-indigo-300 xl:px-4">
+                                        <div class="p-3 rounded-full bg-indigo-400">
+                                            <img class="h-7 xl:h-5" src="https://img.icons8.com/ios/50/000000/paypal.png"/>
+                                        </div>
+                                        <figcaption class="mx-4">
+                                            <h4 class="text-base font-semibold text-clr-black sm:text-lg xl:text-base">Available Balance</h4>
+                                            <div class="text-clr-mid-black text-base sm:text-lg">₱ 626</div>
+                                        </figcaption>
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!--TABLE-->
+                        <div class="flex flex-col mt-8">
+                            <div class="py-2 mx-2 overflow-x-auto sm:-mx-2 sm:px-6 lg:-mx-4 lg:px-8">
+                                <div class="align-middle inline-block min-w-full shadow overflow-hidden md:rounded">
+                                    <table class="min-w-full">
+                                        <thead class="text-clr-black">
+                                            <tr>
+                                                <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-sm leading-4 font-bold text-clr-black uppercase tracking-wider"> Name</th>
+                                                <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-sm leading-4 font-bold text-clr-black uppercase tracking-wider"> Title</th>
+                                                <th class="px-6 py-3 border-b border-gray-200 bg-gray-50 text-left text-sm leading-4 font-bold text-clr-black uppercase tracking-wider"> Status</th>
+                                                <th class="px-6 py-3 border-b border-gray-200 bg-gray-50"></th>
+                                            </tr>
+                                        </thead>
+        
+                                        <tbody class="bg-clr-light-black">
+                                            <!--1-->
+                                            <tr class="hover:bg-clr-whitesmoke hover:bg-opacity-5">
+                                                <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                    <span class="flex items-center">
+                                                        <div class="flex-shrink-0 h-10 w-10">
+                                                            <img class="h-10 w-10 rounded-full" src="/dist/img/tom.jpg" alt="user_photo">
+                                                        </div>
+                                                        <figcaption class="ml-4">
+                                                            <h3 class="text-sm leading-5 font-semibold text-white">Tom Sawyer</h3>
+                                                            <p class="text-sm leading-5 text-gray-300">tomsawyer@gmail.com</p>
+                                                        </figcaption>
+                                                    </span>
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                    <h3 class="text-sm leading-5 font-semibold text-white">Engineer</h3>
+                                                    <p class="text-sm leading-5 text-gray-300">web dev</p>
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-400 text-clr-black">Active</span>
+                                                </td>
+                                                <td
+                                                    class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium">
+                                                    <a href="#" class="text-yellow-600 hover:text-yellow-400">Edit</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+</body>
+<script src="/dist/components/main.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</html>
