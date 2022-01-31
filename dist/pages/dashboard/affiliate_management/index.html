@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="/dist/style.css">
+    <link rel="stylesheet" href="/src/style.css">
     <link rel="icon" href="/dist/img/Logo TLC.PNG">
     <title>Affiliate Management</title>
 </head>
@@ -14,13 +15,13 @@
             <div :class="sidebarOpen ? 'block' : 'hidden'" @click="sidebarOpen = false" class="fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden"></div>
             <!--SIDEBAR-->
             <sidebar :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'" class="fixed z-30 inset-y-0 left-0 w-64 px-2 transition duration-300 transform bg-clr-black overflow-y-auto lg:translate-x-0 lg:static lg:inset-0">
-                <div class="flex items-center justify-center w-full mt-8 py-4 border-clr-whitesmoke border-opacity-30 border-t border-b">
+                <a href="/dist/pages/dashboard/users/index.html" class="flex items-center justify-center w-full mt-8 py-4 border-clr-whitesmoke border-opacity-30 border-t border-b">
                     <img src="/dist/img/tom.jpg" alt="user_photo" class="h-10 mr-2 rounded-full">
                     <figcaption class="flex flex-col items-start justify-center">
-                        <h2 class="text-clr-whitesmoke text-base font-semibold md:text-xl">Tom Sawyer</h2>
+                        <h2 class="hover:underline text-clr-whitesmoke text-base font-semibold md:text-xl">Tom Sawyer</h2>
                         <p class="text-sm text-clr-whitesmoke text-opacity-80 md:text-base">Affiliate</p>
                     </figcaption>
-                </div>
+                </a>
                 <div class="p-4">
                     <p class="text-gray-200 font-bold text-base">MENUS</p>
                 </div>
@@ -143,7 +144,7 @@
                             </a>
                             <div class="border-b w-full flex flex-col">
                                 <a href="#" class="hover:bg-white cursor-pointer text-sm p-2">Account Security</a>
-                                <a href="#" class="hover:bg-white cursor-pointer text-sm p-2">Update my account</a>
+                                <a href="/dist/pages/dashboard/update_account/index.html" class="hover:bg-white cursor-pointer text-sm p-2">Update my account</a>
                             </div>
                             <a href="#" class="hover:bg-white cursor-pointer py-2 px-2 w-full">
                                 <p class="text-sm">Logout</p>
@@ -195,9 +196,9 @@
                         <a href="#" class="hover:bg-white cursor-pointer border-b py-2 w-full">
                             <p class="text-sm px-2">My Orders</p>
                         </a>
-                        <a href="#" class="border-b w-full">
+                        <a class="border-b w-full">
                             <p class="hover:bg-white cursor-pointer text-sm p-2">Account Security</p>
-                            <p class="hover:bg-white cursor-pointer text-sm p-2">Update my account</p>
+                            <a href="/dist/pages/dashboard/update_account/index.html" class="hover:bg-white cursor-pointer text-sm p-2">Update my account</a>
                         </a>
                         <a href="#" class="hover:bg-white cursor-pointer p-2 w-full">
                             <p class="text-sm">Logout</p>
