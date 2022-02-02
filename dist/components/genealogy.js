@@ -6,6 +6,7 @@ window.onload = function () {
                 mode: "dark",
                 enableSearch: false,
                 enableDragDrop: true,
+                mouseScrool: OrgChart.action.zoom,
                 tags: {
                     "head": {
                         template: "rony"
