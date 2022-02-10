@@ -9,50 +9,105 @@
     <title>Register</title>
 </head>
 <body class="font-Kameron">
-    <section class="container p-0 h-screen w-full flex flex-col justify-start sm:flex sm:flex-row">
-        <article class="bg-black bg-opacity-90 w-full flex items-center justify-center">
-            <a href="/dist/index.html"><img src="/dist/img/Logo TLC.PNG" alt="tlc_logo" class="h-40 py-8 sm:h-60 sm:w-48 md:h-80 md:w-72"></a>
+    <section class="container p-0 h-auto w-full flex flex-col justify-start md:flex-row">
+        <article class="bg-black bg-opacity-90 h-auto w-full flex items-center justify-center md:w-2/5 lg:w-2/5">
+            <a href="/dist/index.html"><img src="/dist/img/Logo TLC.PNG" alt="tlc_logo" class="h-40 py-8 sm:h-52 sm:w-40 md:h-72 md:w-64"></a>
         </article>
 
-        <article class="bg-white w-full flex flex-col items-center justify-center py-4">
-            <h3 class="text-lg text-clr-black font-medium sm:text-xl md:font-semibold">Register</h3>
-            <form action="#" class="flex flex-col items-center justify-center w-full">
-                <span class="w-9/12 flex flex-col py-2 lg:w-7/12 xl:w-6/12">
-                    <label for="fullname" class="pb-1 text-sm font-bold text-black text-opacity-90"> Full Name </label>
-                    <input type="text" name="" id="" placeholder="Name" class="focus:border focus:border-yellow-600 outline-none border rounded border-black border-opacity-30 py-1 px-2 text-sm sm:p-2 md:text-base md:p-2">
-                </span>
-                <span class="w-9/12 flex flex-col py-2 lg:w-7/12 xl:w-6/12">
-                    <label for="username" class="pb-1 text-sm font-bold text-black text-opacity-90"> Username </label>
-                    <input type="text" name="" id="" placeholder="Username" class="focus:border focus:border-yellow-600 outline-none border rounded border-black border-opacity-30 py-1 px-2 text-sm sm:p-2 md:text-base md:p-2">
-                </span>
-                <span class="w-9/12 flex flex-col py-2 lg:w-7/12 xl:w-6/12">
-                    <label for="email" class="pb-1 text-sm font-bold text-black text-opacity-90"> E-Mail Address </label>
-                    <input type="email" name="" id="" placeholder="Email" class="focus:border focus:border-yellow-600 outline-none border rounded border-black border-opacity-30 py-1 px-2 text-sm sm:p-2 md:text-base md:p-2">
-                </span>
-                <span class="w-9/12 flex flex-col py-2 lg:w-7/12 xl:w-6/12">
-                    <label for="password" class="pb-1 text-sm font-bold text-black text-opacity-90"> Password </label>
-                    <span class="relative flex items-center">
-                        <input type="password" name="" id="" placeholder="********" class="relative focus:border focus:border-yellow-600 outline-none border rounded border-black border-opacity-30 w-full py-1 px-2 text-sm sm:p-2 md:text-base md:p-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute right-2 h-5 w-5 text-black text-opacity-70 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                        </svg>
+        <article class="bg-white w-full h-auto flex flex-col items-center justify-start p-4 sm:px-8 md:w-3/5 lg:w-full lg:px-6 xl:w-3/5">
+            <h3 class="uppercase text-clr-black font-medium text-xl mb-4 md:mb-0 sm:mt-4 md:font-semibold lg:text-2xl">Register</h3>
+            
+            <form action="#" class="flex flex-col items-start justify-center w-full">
+                <p class="uppercase text-base py-2">PERSONAL INFORMATION</p>
+                <div class="flex flex-col items-center lg:flex-row w-full">
+                    <span class="w-full flex flex-col py-2">
+                        <label for="firstname" class="pb-1 text-sm font-bold text-black text-opacity-90"> First Name </label>
+                        <input type="text" name="" id="" placeholder="First Name" class="focus:border focus:border-yellow-600 outline-none border rounded border-black border-opacity-30 py-1 px-2 text-sm sm:p-2 md:text-base md:p-2">
                     </span>
-                </span>
-                <span class="w-9/12 flex flex-col items-start py-2 lg:w-7/12 xl:w-6/12">
-                    <a href="#" class="hover:underline text-xs text-yellow-600 tracking-widest flex items-center sm:text-sm">
-                        <input type="checkbox" name="" id="" class="mr-1 font-semibold"> Remember Me</a>
-                </span>
-                <span class="w-9/12 flex flex-col items-start py-2 lg:w-7/12 xl:w-6/12">
-                    <button class="hover:bg-yellow-400 transition duration-300 ease-in bg-yellow-300 rounded-md shadow text-sm text-black font-medium p-2 w-full">Register</button>
-                </span>
-                <span class="w-9/12 flex flex-col items-center py-2 lg:w-7/12 xl:w-6/12">
-                    <a href="#" class="hover:underline text-xs text-yellow-600 tracking-widest sm:text-sm">Forgot your password?</a>
-                </span>
-                <span class="w-10/12 flex flex-col items-center py-2 lg:w-7/12 xl:w-6/12">
-                    <p class="text-sm text-black">Have already an account? <a href="/dist/pages/login/index.html" class="hover:underline text-sm text-yellow-600 tracking-widest">Login Here</a></p>
-                </span>
+                    <span class="w-full flex flex-col py-2 md:mx-2">
+                        <label for="midname" class="pb-1 text-sm font-bold text-black text-opacity-90"> Middle Name </label>
+                        <input type="text" name="" id="" placeholder="Middle Name" class="focus:border focus:border-yellow-600 outline-none border rounded border-black border-opacity-30 py-1 px-2 text-sm sm:p-2 md:text-base md:p-2">
+                    </span>
+                    <span class="w-full flex flex-col py-2">
+                        <label for="lastname" class="pb-1 text-sm font-bold text-black text-opacity-90"> Last Name </label>
+                        <input type="text" name="" id="" placeholder="Last Name" class="focus:border focus:border-yellow-600 outline-none border rounded border-black border-opacity-30 py-1 px-2 text-sm sm:p-2 md:text-base md:p-2">
+                    </span>
+                </div>
+                <div class="flex flex-col items-center lg:flex-row w-full">
+                    <span class="w-full flex flex-col py-2">
+                        <label for="birthdate" class="pb-1 text-sm font-bold text-black text-opacity-90"> Birth Date </label>
+                        <input type="date" name="" id="" placeholder="" class="w-full focus:border focus:border-yellow-600 outline-none border rounded border-black border-opacity-30 py-1 px-2 text-sm sm:p-2 md:text-base md:p-2">
+                    </span>
+                    <span class="w-full flex flex-col py-2 md:mx-2">
+                        <label for="contact" class="pb-1 text-sm font-bold text-black text-opacity-90"> Contact Number </label>
+                        <input type="text" name="" id="" placeholder="Contact Number" class="w-full focus:border focus:border-yellow-600 outline-none border rounded border-black border-opacity-30 py-1 px-2 text-sm sm:p-2 md:text-base md:p-2">
+                    </span>
+                    <span class="w-full flex flex-col py-2">
+                        <label for="email" class="pb-1 text-sm font-bold text-black text-opacity-90"> E-Mail Address </label>
+                        <input type="email" name="" id="" placeholder="Email" class="w-full focus:border focus:border-yellow-600 outline-none border rounded border-black border-opacity-30 py-1 px-2 text-sm sm:p-2 md:text-base md:p-2">
+                    </span>
+                </div>
+
+                <p class="uppercase text-base pb-2 pt-4">PLACEMENT DETAILS</p>
+                <div class="flex flex-col items-center lg:flex-row w-full">
+                    <span class="w-full flex flex-col py-2">
+                        <label for="sponsor" class="pb-1 text-sm font-bold text-black text-opacity-90"> Sponsor </label>
+                        <input type="text" name="" id="" placeholder="Sponsor" class="focus:border focus:border-yellow-600 outline-none border rounded border-black border-opacity-30 py-1 px-2 text-sm sm:p-2 md:text-base md:p-2">
+                    </span>
+                    <span class="w-full flex flex-col py-2 md:mx-2">
+                        <label for="upline" class="pb-1 text-sm font-bold text-black text-opacity-90"> Upline </label>
+                        <input type="text" name="" id="" placeholder="Upline" class="focus:border focus:border-yellow-600 outline-none border rounded border-black border-opacity-30 py-1 px-2 text-sm sm:p-2 md:text-base md:p-2">
+                    </span>
+                    <span class="w-full flex flex-col py-2">
+                        <label for="position" class="pb-1 text-sm font-bold text-black text-opacity-90"> Position </label>
+                        <input type="text" name="" id="" placeholder="Position" class="focus:border focus:border-yellow-600 outline-none border rounded border-black border-opacity-30 py-1 px-2 text-sm sm:p-2 md:text-base md:p-2">
+                    </span>
+                </div>
+
+                <p class="uppercase text-base pb-2 pt-4">LOGIN DETAILS</p>
+                <div class="flex flex-col items-center lg:flex-row w-full">
+                    <span class="flex flex-col w-full py-2">
+                        <label for="password" class="pb-1 text-sm font-bold text-black text-opacity-90"> User ID </label>
+                        <input type="text" name="" id="" placeholder="User ID" class="relative focus:border focus:border-yellow-600 outline-none border rounded border-black border-opacity-30 w-full py-1 px-2 text-sm sm:p-2 md:text-base md:p-2">
+                    </span>
+                    <div class="flex flex-col md:mx-2 w-full py-2">
+                        <label for="password" class="pb-1 text-sm font-bold text-black text-opacity-90"> Password </label>
+                        <span class="relative flex items-center w-full">
+                            <input type="password" name="" id="" placeholder="********" class="relative focus:border focus:border-yellow-600 outline-none border rounded border-black border-opacity-30 w-full py-1 px-2 text-sm sm:p-2 md:text-base md:p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="absolute right-2 h-5 w-5 text-black text-opacity-70 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </span>
+                    </div>
+                    <span class="flex flex-col w-full py-2">
+                        <label for="password" class="pb-1 text-sm font-bold text-black text-opacity-90"> Confirm Password </label>
+                        <input type="password" name="" id="" placeholder="********" class="relative focus:border focus:border-yellow-600 outline-none border rounded border-black border-opacity-30 w-full py-1 px-2 text-sm sm:p-2 md:text-base md:p-2">
+                    </span>
+                </div>
+
+                <div class="flex flex-col items-start w-full pt-4">
+                    <label for="midname" class="pb-1 text-sm font-bold text-black text-opacity-90"> Activation Code </label>
+                    <input type="text" name="" id="" placeholder="xxxxxxxx" class="w-full focus:border focus:border-yellow-600 outline-none border rounded border-black border-opacity-30 py-1 px-2 text-sm sm:p-2 md:text-base md:p-2">
+                </div>
+
+                <div class="flex flex-col items-center justify-center w-full pt-4">
+                    <span class="w-full flex flex-col items-start py-2 lg:w-full">
+                        <a href="#" class="hover:underline text-xs text-yellow-600 tracking-widest flex items-center sm:text-sm">
+                            <input type="checkbox" name="" id="" class="mr-1 font-semibold"> Remember Me</a>
+                    </span>
+                    <span class="w-full flex flex-col items-start py-2 lg:w-7/12 xl:w-6/12">
+                        <button class="hover:bg-yellow-400 transition duration-300 ease-in bg-yellow-300 rounded-md shadow text-sm text-black font-medium p-2 w-full">Register</button>
+                    </span>
+                    <span class="w-9/12 flex flex-col items-center py-2 lg:w-7/12 xl:w-6/12">
+                        <a href="#" class="hover:underline text-xs text-yellow-600 tracking-widest sm:text-sm">Forgot your password?</a>
+                    </span>
+                    <span class="w-full flex flex-col items-center py-2 lg:w-7/12 xl:w-6/12">
+                        <p class="text-sm text-black">Have already an account? <a href="/dist/pages/login/index.html" class="hover:underline text-sm text-yellow-600 tracking-widest">Login Here</a></p>
+                    </span>
+                </div>
             </form>
+
         </article>
     </section>
 </body>
