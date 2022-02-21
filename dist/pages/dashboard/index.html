@@ -13,7 +13,7 @@
         <div x-data="{ sidebarOpen: false }" class="flex h-screen bg-clr-black">
             <div :class="sidebarOpen ? 'block' : 'hidden'" @click="sidebarOpen = false" class="fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden"></div>
             <!--SIDEBAR-->
-            <sidebar :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'" class="fixed z-30 inset-y-0 left-0 w-64 px-2 transition duration-300 transform bg-clr-black overflow-y-auto lg:translate-x-0 lg:static lg:inset-0">
+            <sidebar :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'" class="relative fixed z-30 inset-y-0 left-0 w-64 px-2 transition duration-300 transform bg-clr-black overflow-y-auto lg:translate-x-0 lg:static lg:inset-0">
                 <a href="/dist/pages/dashboard/users/index.html" class="flex items-center justify-center w-full mt-8 py-4 border-clr-whitesmoke border-opacity-30 border-t border-b">
                     <img src="/dist/img/tom.jpg" alt="user_photo" class="h-10 mr-2 rounded-full">
                     <figcaption class="flex flex-col items-start justify-center">
@@ -60,6 +60,12 @@
                         <h3 class="text-base">Genealogy</h3>
                     </a>
                 </nav>
+
+                <div class="absolute bottom-6 flex flex-col items-center justify-center">
+                    <p class="text-center text-base text-gray-200 font-medium">TLC User-01</p>
+                    <a href="#" class="hover:underline text-sm text-gray-400 text-center mb-2">Click here to return to the Main Account</a>
+                    <button type="button" class="hover:bg-opacity-95 shadow text-white text-base rounded-md bg-clr-orange px-4 py-1">Return</button>
+                </div>
             </sidebar>
             
             <div class="flex-1 flex flex-col overflow-hidden">
