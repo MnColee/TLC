@@ -9,7 +9,7 @@ function scrollFunction() {
   } else {
     document.getElementById("navbar").style.backgroundColor = "transparent";
     document.getElementById("navbar").style.padding = "15px 10px";
-    document.getElementById("logbtn").style.padding = "3px 15px";
+    document.getElementById("logbtn").style.padding = "3px 0";
     document.getElementById("inside").style.height = "120px";
   }
 }
