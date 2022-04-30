@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/dist/style.css">
     <title>TLC</title>
 </head>
-<body class="font-Kameron">
+<body class="font-Kameron scrollable">
     <header id="navbar" class="fixed inset-x-0 top-0 z-30 py-4 px-2 w-full flex items-start justify-between sm:px-10 lg:px-16">
         <div class="container flex items-center justify-between pr-2">
             <a href="/dist/index.html"><img src="/dist/img/Logo TLC.PNG" alt="tlc_logo" id="inside" class="h-28 sm:h-32 md:h-36 lg:h-40"></a>
@@ -26,7 +26,7 @@
                     <li id="log"><a href="/dist/pages/login/index.html" class="hover:text-clr-black hover:bg-yellow-400 transition duration-500 ease-in-out bg-yellow-600 py-2 px-6 text-white text-sm rounded-full md:text-base">Login</a></li>
                 </ul>
                 <!--mobile menu button-->
-                <button onClick="document.getElementById('pol').style.display='block'">
+                <button id="prevent" onClick="document.getElementById('pol').style.display='block'">
                     <svg  xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 filt lg:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
@@ -36,8 +36,8 @@
     </header>
 
     <!--mobile navbar-->
-    <section id="pol" class="popup hidden fixed inset-0 bg-black bg-opacity-80 z-50">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute top-4 right-4 text-yellow-400 hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <section id="pol" class="popup hidden fixed inset-0 bg-white z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" id="allow" class="h-6 w-6 close-btn absolute top-4 right-4 text-yellow-400 hover:text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
         <article class="popup-content text-yellow-600 h-full">
@@ -288,6 +288,34 @@
             pol.style.display = 'none';
         }
   });  
+</script>
+
+<script>
+    const closeBtn = document.querySelector('.close-btn');
+
+    closeBtn.addEventListener('click', ()=>{
+        pol.style.display = "none"
+    })
+</script>
+
+<script>
+function preventScroll(e){
+    e.preventDefault();
+    e.stopPropagation();
+
+    return false;
+}
+
+function disable(){
+  document.querySelector('.scrollable').classList.add('disable-scroll');
+}
+
+function enable(){
+  document.querySelector('.scrollable').classList.remove('disable-scroll');
+}
+
+document.querySelector('#prevent').addEventListener('click', disable);
+document.querySelector('#allow').addEventListener('click', enable);
 </script>
 
 <script src="/dist/components/main.js"></script>

@@ -5,6 +5,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&display=swap');
 
 /* old */
+.scrollable{
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.disable-scroll{
+  overflow-y: hidden;
+}
+
 
 .loader {
     width: 100%;
